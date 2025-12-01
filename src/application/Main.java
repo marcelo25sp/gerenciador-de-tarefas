@@ -8,12 +8,21 @@ import entities.GerenciadorTarefas;
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		
+
 		GerenciadorTarefas gerenciador = new GerenciadorTarefas();
-		
+
+		System.out.println("=======GERENCIADOR DE TAREFAS=======");
+		System.out.println();
+		System.out.println("1 - Cadastrar tarefa");
+		System.out.println("2 - Remover tarefa");
+		System.out.println("3 - Listar tarefas");
+		System.out.println("4 - Listar tarefas por status");
+		System.out.println("0 - Sair");
+		System.out.print("Escolha uma opção: ");
+
 		sc.close();
 
 	}
