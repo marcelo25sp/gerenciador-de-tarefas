@@ -40,13 +40,13 @@ public class Main {
 				System.out.print("Id: ");
 				int id = sc.nextInt();
 				sc.nextLine(); // consumindo a quebra de linha
-				
+
 				System.out.print("Título: ");
 				String titulo = sc.nextLine();
-				
+
 				System.out.print("Descrição: ");
 				String descricao = sc.nextLine();
-				
+
 				System.out.print("Status (PENDENTE/EM_ANDAMENTO/CONCLUIDO): ");
 				String statusStr = sc.nextLine();
 				StatusTarefa status = StatusTarefa.valueOf(statusStr);
@@ -67,23 +67,30 @@ public class Main {
 
 				System.out.println();
 				break;
-				
+
 			case 2:
 				System.out.println("===Remover tarefa===");
 				System.out.println();
-				
+
 				System.out.print("Entre com o Id da tarefa a ser removida: ");
 				int idRemover = sc.nextInt();
 				sc.nextLine();
-				
-				boolean removido = gerenciador.removerTarefa(idRemover); 
-				
-				if(removido) {
+
+				boolean removido = gerenciador.removerTarefa(idRemover);
+
+				if (removido) {
 					System.out.println("Tarefa removida com sucesso!");
-				}else {
+				} else {
 					System.out.println("Tarefa não encontrada!");
 				}
-				
+
+				System.out.println();
+				break;
+
+			case 3:
+				System.out.println("===Listar tarefas===");
+				System.out.println();
+				gerenciador.listarTarefas();
 				System.out.println();
 				break;
 
