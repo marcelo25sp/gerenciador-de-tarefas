@@ -10,16 +10,13 @@ public class Tarefas {
 	private String nome;
 	private String descricao;
 	private StatusTarefa status;
-	private LocalDate dataCriacao;
 	private LocalDate dataLimite;
 
-	public Tarefas(Integer id, String nome, String descricao, StatusTarefa status, LocalDate dataCriacao,
-			LocalDate dataLimite) {
+	public Tarefas(Integer id, String nome, String descricao, StatusTarefa status, LocalDate dataLimite) {
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.status = status;
-		this.dataCriacao = dataCriacao;
 		this.dataLimite = dataLimite;
 	}
 
@@ -37,10 +34,6 @@ public class Tarefas {
 
 	public StatusTarefa getStatus() {
 		return status;
-	}
-
-	public LocalDate getDataCriacao() {
-		return dataCriacao;
 	}
 
 	public LocalDate getDataLimite() {
@@ -61,10 +54,6 @@ public class Tarefas {
 
 	public void setStatus(StatusTarefa status) {
 		this.status = status;
-	}
-
-	public void setDataCriacao(LocalDate dataCriacao) {
-		this.dataCriacao = dataCriacao;
 	}
 
 	public void setDataLimite(LocalDate dataLimite) {
