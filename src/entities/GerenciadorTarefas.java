@@ -19,6 +19,9 @@ public class GerenciadorTarefas {
 	}
 
 	public void listarTarefas() {
+		for(Tarefas x : tarefas) {
+			System.out.println(x);
+		}
 
 	}
 
