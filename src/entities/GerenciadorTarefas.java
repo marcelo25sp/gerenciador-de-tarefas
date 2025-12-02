@@ -15,7 +15,7 @@ public class GerenciadorTarefas {
 	}
 
 	public void removerTarefa(Tarefas tarefa) {
-
+		tarefas.remove(tarefa);
 	}
 
 	public void listarTarefas() {
