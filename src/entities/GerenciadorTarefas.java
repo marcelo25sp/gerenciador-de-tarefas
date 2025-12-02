@@ -19,13 +19,17 @@ public class GerenciadorTarefas {
 	}
 
 	public void listarTarefas() {
-		for(Tarefas x : tarefas) {
+		for (Tarefas x : tarefas) {
 			System.out.println(x);
 		}
-
 	}
 
 	public void listarPorStatus(StatusTarefa status) {
+		for(Tarefas x : tarefas) {
+			if(x.getStatus() == status) {
+				System.out.println(x);
+			}
+		}
 
 	}
 
