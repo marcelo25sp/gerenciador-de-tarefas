@@ -14,8 +14,14 @@ public class GerenciadorTarefas {
 		System.out.println("Tarefa cadastrada!");
 	}
 
-	public void removerTarefa(Tarefas tarefa) {
-		tarefas.remove(tarefa);
+	public boolean removerTarefa(int id) {
+		for (Tarefas x : tarefas) {
+			if (x.getId() == id) {
+				tarefas.remove(x);
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void listarTarefas() {
@@ -25,8 +31,8 @@ public class GerenciadorTarefas {
 	}
 
 	public void listarPorStatus(StatusTarefa status) {
-		for(Tarefas x : tarefas) {
-			if(x.getStatus() == status) {
+		for (Tarefas x : tarefas) {
+			if (x.getStatus() == status) {
 				System.out.println(x);
 			}
 		}
