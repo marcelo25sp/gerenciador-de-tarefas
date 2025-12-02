@@ -14,14 +14,18 @@ public class Main {
 
 		GerenciadorTarefas gerenciador = new GerenciadorTarefas();
 
-		System.out.println("=======GERENCIADOR DE TAREFAS=======");
-		System.out.println();
-		System.out.println("1 - Cadastrar tarefa");
-		System.out.println("2 - Remover tarefa");
-		System.out.println("3 - Listar tarefas");
-		System.out.println("4 - Listar tarefas por status");
-		System.out.println("0 - Sair");
-		System.out.print("Escolha uma opção: ");
+		int opcao = -1; // solução provisória forçando a iniciar o bloco de repetição while
+
+		while (opcao != 0) {
+			System.out.println("=======GERENCIADOR DE TAREFAS=======");
+			System.out.println();
+			System.out.println("1 - Cadastrar tarefa");
+			System.out.println("2 - Remover tarefa");
+			System.out.println("3 - Listar tarefas");
+			System.out.println("4 - Listar tarefas por status");
+			System.out.println("0 - Sair");
+			System.out.print("Escolha uma opção: ");
+		}
 
 		sc.close();
 
