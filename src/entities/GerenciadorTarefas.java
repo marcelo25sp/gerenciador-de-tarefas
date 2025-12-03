@@ -25,8 +25,12 @@ public class GerenciadorTarefas {
 	}
 
 	public void listarTarefas() {
-		for (Tarefas x : tarefas) {
-			System.out.println(x);
+		if (tarefas.isEmpty()) {
+			System.out.println("Nenhuma tarefa cadastrada!");
+		} else {
+			for (Tarefas x : tarefas) {
+				System.out.println(x);
+			}
 		}
 	}
 
