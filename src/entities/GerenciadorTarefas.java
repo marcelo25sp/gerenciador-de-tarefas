@@ -23,6 +23,10 @@ public class GerenciadorTarefas {
 		}
 		return false;
 	}
+	
+	public int getTotalTarefas() {
+		return tarefas.size();
+	}
 
 	public void listarTarefas() {
 		if (tarefas.isEmpty()) { 

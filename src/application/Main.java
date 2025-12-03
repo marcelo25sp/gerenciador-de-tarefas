@@ -90,6 +90,7 @@ public class Main {
 			case 3:
 				System.out.println("===Listar tarefas===");
 				System.out.println();
+				System.out.println("Total de tarefas: " + gerenciador.getTotalTarefas());
 				gerenciador.listarTarefas();
 				System.out.println();
 				break;
