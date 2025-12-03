@@ -94,6 +94,24 @@ public class Main {
 				System.out.println();
 				break;
 
+			case 4:
+				System.out.println("===Listar tarefas por status===");
+				System.out.println();
+				System.out.println(
+						"Status:(PENDENTE/EM_ANDAMENTO/CONCLUIDO). Digite o status desejado para a consulta: ");
+				String statusConsulta = sc.nextLine().trim().toUpperCase();
+
+				if (statusConsulta.equals("PENDENTE") || (statusConsulta.equals("EM_ANDAMENTO"))
+						|| (statusConsulta.equals("CONCLUIDO"))) {
+
+					StatusTarefa statusFiltro = StatusTarefa.valueOf(statusConsulta);
+					System.out.println();
+					gerenciador.listarPorStatus(statusFiltro);
+				} else {
+					System.out.println("Status inválido! Tente novamente!");
+				}
+				break;
+
 			}
 
 		}
