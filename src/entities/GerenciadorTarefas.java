@@ -25,7 +25,7 @@ public class GerenciadorTarefas {
 	}
 
 	public void listarTarefas() {
-		if (tarefas.isEmpty()) {
+		if (tarefas.isEmpty()) { 
 			System.out.println("Nenhuma tarefa cadastrada!");
 		} else {
 			for (Tarefas x : tarefas) {
@@ -35,9 +35,16 @@ public class GerenciadorTarefas {
 	}
 
 	public void listarPorStatus(StatusTarefa status) {
+		boolean encontrado = false;
+		
 		for (Tarefas x : tarefas) {
 			if (x.getStatus() == status) {
 				System.out.println(x);
+				encontrado = true;
+			}
+			
+			if(!encontrado) {
+				System.out.println("Nenhuma tarefa encontrada com o status mencionado!");
 			}
 		}
 
