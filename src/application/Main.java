@@ -113,6 +113,10 @@ public class Main {
 				}
 				break;
 				
+			case 0:
+				System.out.println("Encerrando o programa...");
+				break;
+				
 			default:
 				System.out.println("Opção inválida!");
 				break;
