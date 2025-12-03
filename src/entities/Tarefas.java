@@ -59,5 +59,15 @@ public class Tarefas {
 	public void setDataLimite(LocalDate dataLimite) {
 		this.dataLimite = dataLimite;
 	}
+	
+	public String toString() {
+		return "Id: " + id
+			 + " - Título: " + nome
+			 + " - Descrição: " + descricao
+			 + " - Status: " + status
+			 + " - Data Limite: " + dataLimite;
+	}
 
+	
+	
 }
