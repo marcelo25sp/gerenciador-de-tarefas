@@ -111,7 +111,10 @@ public class Main {
 					System.out.println("Status inválido! Tente novamente!");
 				}
 				break;
-
+				
+			default:
+				System.out.println("Opção inválida!");
+				break;
 			}
 
 		}
