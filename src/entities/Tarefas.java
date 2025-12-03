@@ -61,11 +61,13 @@ public class Tarefas {
 	}
 	
 	public String toString() {
-		return "Id: " + id
-			 + " - Título: " + nome
-			 + " - Descrição: " + descricao
-			 + " - Status: " + status
-			 + " - Data Limite: " + dataLimite;
+		return "-------------------------------"
+			 + "\nId: " + id
+			 + "\n - Título: " + nome
+			 + "\n - Descrição: " + descricao
+			 + "\n - Status: " + status
+			 + "\n - Data Limite: " + dataLimite
+			 + "\n------------------------------";
 	}
 
 	
