@@ -125,7 +125,7 @@ public class Main {
 			case 0:
 				
 				// o usuário sai do loop e encerra o programa
-				System.out.println("Encerrando o programa...");
+				System.out.println("Encerrando o programa....");
 				break;
 				
 			default:
