@@ -17,8 +17,9 @@ public class Main {
 
 		GerenciadorTarefas gerenciador = new GerenciadorTarefas();
 
-		int opcao = -1; // solução provisória forçando a iniciar o bloco de repetição while
+		int opcao = -1; // solução para forçar a entrada no loop inicialmente
 
+		// menu de interação com o usuário
 		while (opcao != 0) {
 			System.out.println("=======GERENCIADOR DE TAREFAS=======");
 			System.out.println();
@@ -34,12 +35,14 @@ public class Main {
 
 			switch (opcao) {
 			case 1:
+				
+				// cadastro de tarefa
 				System.out.println("===Cadastrar tarefa===");
 				System.out.println();
 
 				System.out.print("Id: ");
 				int id = sc.nextInt();
-				sc.nextLine(); // consumindo a quebra de linha
+				sc.nextLine(); // consumindo a quebra de linha deixada pelo nextInt()
 
 				System.out.print("Título: ");
 				String titulo = sc.nextLine();
@@ -51,9 +54,10 @@ public class Main {
 				String statusStr = sc.nextLine();
 				StatusTarefa status = StatusTarefa.valueOf(statusStr);
 
+				// LocalDate.parse espera por um formato ISO (AAAA-MM-DD)
 				LocalDate dataLimite = null;
 				while (dataLimite == null) {
-					System.out.print("Data limite:(AAAA/MM/DD) ");
+					System.out.print("Data limite:(AAAA-MM-DD) ");
 					String dataStr = sc.nextLine().trim();
 					try {
 						dataLimite = LocalDate.parse(dataStr);
@@ -69,6 +73,8 @@ public class Main {
 				break;
 
 			case 2:
+				
+				//Remover tarefa
 				System.out.println("===Remover tarefa===");
 				System.out.println();
 
@@ -88,6 +94,8 @@ public class Main {
 				break;
 
 			case 3:
+				
+				// exibe a quantidade e a lista de tarefas cadastradas
 				System.out.println("===Listar tarefas===");
 				System.out.println();
 				System.out.println("Total de tarefas: " + gerenciador.getTotalTarefas());
@@ -96,10 +104,11 @@ public class Main {
 				break;
 
 			case 4:
+				
+				// exibe a lista de tarefas por status definido pelo usuário 
 				System.out.println("===Listar tarefas por status===");
 				System.out.println();
-				System.out.println(
-						"Status:(PENDENTE/EM_ANDAMENTO/CONCLUIDO). Digite o status desejado para a consulta: ");
+				System.out.println("Status:(PENDENTE/EM_ANDAMENTO/CONCLUIDO). Digite o status desejado para a consulta: ");
 				String statusConsulta = sc.nextLine().trim().toUpperCase();
 
 				if (statusConsulta.equals("PENDENTE") || (statusConsulta.equals("EM_ANDAMENTO"))
@@ -114,6 +123,8 @@ public class Main {
 				break;
 				
 			case 0:
+				
+				// o usuário sai do loop e encerra o programa
 				System.out.println("Encerrando o programa...");
 				break;
 				

@@ -2,6 +2,11 @@ package entities;
 
 import java.time.LocalDate;
 
+/*
+ * Representa as tarefas do sistema
+ * Classe com atributos da tarefa e método toString para exibição das tarefas
+ */
+
 import entities.enums.StatusTarefa;
 
 public class Tarefas {
@@ -20,6 +25,7 @@ public class Tarefas {
 		this.dataLimite = dataLimite;
 	}
 
+	// métodos getters
 	public Integer getId() {
 		return id;
 	}
@@ -40,6 +46,8 @@ public class Tarefas {
 		return dataLimite;
 	}
 
+	
+	// métodos setters
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -60,6 +68,7 @@ public class Tarefas {
 		this.dataLimite = dataLimite;
 	}
 
+	// método toString que exibe de forma organizada os atributos da tarefa
 	public String toString() {
 		return "-------------------------------" 
 			 + "\nId: " + id 
